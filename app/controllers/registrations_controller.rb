@@ -14,7 +14,7 @@ class RegistrationsController < ApplicationController
 
   # GET /registrations/new
   def new
-    @registration = Registration.new
+    @registration = Registration.new 
   end
 
   # GET /registrations/1/edit

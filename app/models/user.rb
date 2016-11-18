@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-	has_many :registration
+	has_many :registrations
 end

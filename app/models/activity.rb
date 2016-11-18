@@ -1,4 +1,4 @@
 class Activity < ActiveRecord::Base
   belongs_to :event
-  has_many :registration
+  has_many :registrations
 end

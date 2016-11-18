@@ -14,6 +14,6 @@
   <strong>Date:</strong>
   <%= @event.date %>
 </p>
-
+<p><%= link_to "Ver Programação", event_activities_path(@event) %></p>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
