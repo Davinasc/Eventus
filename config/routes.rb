@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :registrations
+  resources :activities
   resources :events
   root 'events#index'
   # The priority is based upon order of creation: first created -> highest priority.
