@@ -16,7 +16,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= activity.name %></td>
-        <td><%= activity.event %></td>
+        <td><%= activity.event.name %></td>
         <td><%= activity.vagas %></td>
         <td><%= link_to 'Show', activity %></td>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
@@ -29,3 +29,4 @@
 <br>
 
 <%= link_to 'New Activity', new_activity_path %>
+<p><%= link_to "Inicio", root_path %></p>
