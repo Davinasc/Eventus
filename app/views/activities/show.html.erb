@@ -15,5 +15,5 @@
   <%= @activity.vagas %>
 </p>
 
-<%= link_to 'Edit', edit_event_activity_path(@event, @activity) %> |
-<%= link_to 'Back', event_activities_path(@event) %>
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', event_activities_path(@activity.event_id) %>
