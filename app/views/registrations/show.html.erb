@@ -2,12 +2,22 @@
 
 <p>
   <strong>User:</strong>
-  <%= @registration.user %>
+  <%= @registration.user.name %>
 </p>
 
 <p>
   <strong>Event:</strong>
-  <%= @registration.event %>
+  <%= @registration.event.name %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @registration.activity.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @registration.status %>
 </p>
 
 <%= link_to 'Edit', edit_registration_path(@registration) %> |
