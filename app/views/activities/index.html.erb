@@ -16,9 +16,9 @@
       <tr>
         <td><%= activity.name %></td>
         <td><%= activity.vagas %></td>
-        <td><%= link_to 'Show', event_activity_path(@event, activity) %></td>
-        <td><%= link_to 'Edit', edit_event_activity_path(@event, activity) %></td>
-        <td><%= link_to 'Destroy', event_activity_path(@event, activity), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', activity %></td>
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity_path(activity), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
