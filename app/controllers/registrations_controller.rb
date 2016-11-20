@@ -14,7 +14,8 @@ class RegistrationsController < ApplicationController
 
   # GET /registrations/new
   def new
-    @registration = Registration.new 
+    @event = Event.find(params[:event_id])
+    @registration = @event.registrations.new
   end
 
   # GET /registrations/1/edit

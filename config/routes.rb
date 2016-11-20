@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :users
   resources :events do 
     resources :activities, olny: [:index, :new, :create]
+    resources :registrations, olny: [:index, :new, :create]
   end
+  resources :registrations, only: [:show, :edit, :update, :destroy]
   resources :activities, only: [:show, :edit, :update, :destroy]
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
