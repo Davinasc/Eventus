@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
   get 'welcome/index'
 
+  resources :users
   resources :events do 
     resources :activities, olny: [:index, :new, :create]
     resources :registrations, olny: [:index, :new, :create]
