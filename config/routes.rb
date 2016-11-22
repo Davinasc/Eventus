@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get  '/signup', to: 'users#new'
+
   get 'welcome/index'
 
-  resources :users
   resources :events do 
     resources :activities, olny: [:index, :new, :create]
     resources :registrations, olny: [:index, :new, :create]

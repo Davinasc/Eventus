@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118213607) do
+ActiveRecord::Schema.define(version: 20161122024447) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
@@ -19,9 +18,8 @@ ActiveRecord::Schema.define(version: 20161118213607) do
     t.integer  "vagas"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_activities_on_event_id"
   end
-
-  add_index "activities", ["event_id"], name: "index_activities_on_event_id"
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -38,17 +36,9 @@ ActiveRecord::Schema.define(version: 20161118213607) do
     t.datetime "updated_at",  null: false
     t.integer  "activity_id"
     t.string   "status"
-  end
-
-  add_index "registrations", ["activity_id"], name: "index_registrations_on_activity_id"
-  add_index "registrations", ["event_id"], name: "index_registrations_on_event_id"
-  add_index "registrations", ["user_id"], name: "index_registrations_on_user_id"
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_registrations_on_activity_id"
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
 end
